@@ -1,7 +1,7 @@
 import tl = require('azure-pipelines-task-lib/task');
 const axios = require('axios').default;
 
-const DDURL = "https://api.datadoghq.com/api/v1/events?api_key="
+const DDURL = "https://api.datadoghq.eu/api/v1/metrics?api_key="; //change to tl.getInput('ddApiUrl') and default to eu; 
 const APIKEY: string = tl.getInput('ddApiKey'); 
 const EVENTTITLE: string = tl.getInput('ddEventTitle');
 const EVENTTEXT: string = tl.getInput('ddEventText');
